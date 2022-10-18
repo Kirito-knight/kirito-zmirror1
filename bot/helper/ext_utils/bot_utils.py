@@ -32,15 +32,15 @@ class MirrorStatus:
     STATUS_SEEDING = "Seeding"
 
 class EngineStatus:
-    STATUS_ARIA = "Aria2p"
-    STATUS_GD = "Google Api"
-    STATUS_MEGA = "Mega Api"
-    STATUS_QB = "Bittorrent"
-    STATUS_TG = "Pyrogram"
-    STATUS_YT = "YT-dlp"
-    STATUS_EXT = "pExtract"
-    STATUS_SPLIT = "FFmpeg"
-    STATUS_ZIP = "p7zip"
+    STATUS_ARIA = "Aria2p⛏️"
+    STATUS_GD = "Google Api🔗"
+    STATUS_MEGA = "Mega Api🧰"
+    STATUS_QB = "Bittorrent💉"
+    STATUS_TG = "Pyrogram🧲"
+    STATUS_YT = "YT-dlp📌"
+    STATUS_EXT = "pExtract💊"
+    STATUS_SPLIT = "FFmpeg🪝"
+    STATUS_ZIP = "p7zip🧪"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -163,11 +163,9 @@ T: {disk_t} | F: {disk_f}
 Working For: {currentTime}
 T-DL: {recv} | T-UL: {sent}
 
-Made with ❤️ by Dawn
+Made with ❤️ by Aziz
 """
 
-#---Thanks for deleting my name ❤️ Appreciate it---#
-#---Remove this line too, who cares---#
 
 dispatcher.add_handler(CallbackQueryHandler(pop_up_stats, pattern=f"^{str(THREE)}$"))
 
