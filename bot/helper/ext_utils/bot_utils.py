@@ -240,8 +240,8 @@ def get_readable_message():
                 elif 'M' in spd:
                     up_speed += float(spd.split('M')[0]) * 1048576
         bmsg = f"\n<b>___________________________________</b>"
-        bmsg += f"\n<b>📐FREE:</b> <code>{get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}</code><b> | ⚒️UPTM:</b> <code>{get_readable_time(time() - botStartTime)}</code>"
-        bmsg += f"\n<b>🔽DL:</b> <code>{get_readable_file_size(dl_speed)}/s</code><b> | 🔼UL:</b> <code>{get_readable_file_size(up_speed)}/s</code>"
+        bmsg += f"\n<b>🔋FREE:</b> <code>{get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}</code><b> | ⚒️UPTM:</b> <code>{get_readable_time(time() - botStartTime)}</code>"
+        bmsg += f"\n<b>🔻DL:</b> <code>{get_readable_file_size(dl_speed)}/s</code><b> | 🔺UL:</b> <code>{get_readable_file_size(up_speed)}/s</code>"
         buttons = ButtonMaker()
         buttons.sbutton("⚙️Bot SYS Statistics⚙️", str(THREE))
         button = buttons.build_menu(1)
