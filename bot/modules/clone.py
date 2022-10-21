@@ -77,7 +77,7 @@ def _clone(message, bot):
     is_appdrive = is_appdrive_link(link)
     is_gdtot = is_gdtot_link(link)
     if is_appdrive:
-        msg = sendMessage(f"Processing: <code>{link}</code>", bot, message)
+        msg = sendMessage(f"⚙️Processing⚙️: <code>{link}</code>", bot, message)
         try:
             link = appdrive(link)
             deleteMessage(bot, msg)
@@ -86,7 +86,7 @@ def _clone(message, bot):
             return sendMessage(str(e), bot, message)
     if is_gdtot:
         try:
-            msg = sendMessage(f"Processing: <code>{link}</code>", bot, message)
+            msg = sendMessage(f"🪛Processing🪛: <code>{link}</code>", bot, message)
             link = gdtot(link)
             deleteMessage(bot, msg)
         except DirectDownloadLinkException as e:
@@ -124,7 +124,7 @@ def _clone(message, bot):
             sleep(4)
             Thread(target=_clone, args=(nextmsg, bot)).start()
         if files <= 20:
-            msg = sendMessage(f"Cloning: <code>{link}</code>", bot, message)
+            msg = sendMessage(f"♻️Cloning♻️: <code>{link}</code>", bot, message)
             result, button = gd.clone(link)
             deleteMessage(bot, msg)
             if BOT_PM and FORCE_BOT_PM:
@@ -172,7 +172,7 @@ def _clone(message, bot):
                     update_all_messages()
             except IndexError:
                 pass
-        cc = f'\n\n<b>cc: </b>{tag}'
+        cc = f'\n\n<b>🧑‍🎓CLONER🧑‍🎓: </b>{tag}'
         if button in ["cancelled", ""]:
             sendMessage(f"{tag} {result}", bot, message)
         else:
