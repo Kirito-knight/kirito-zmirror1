@@ -86,7 +86,7 @@ def _clone(message, bot):
             return sendMessage(str(e), bot, message)
     if is_gdtot:
         try:
-            msg = sendMessage(f"🪛Processing🪛: <code>{link}</code>", bot, message)
+            msg = sendMessage(f"🌪️Processing🌪️: <code>{link}</code>", bot, message)
             link = gdtot(link)
             deleteMessage(bot, msg)
         except DirectDownloadLinkException as e:
