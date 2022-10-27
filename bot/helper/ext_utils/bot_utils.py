@@ -112,13 +112,13 @@ def bt_selection_buttons(id_: str):
     return buttons.build_menu(2)
 
 def get_progress_bar_string(status):
-    completed = status.processed_bytes() / 8
-    total = status.size_raw() / 8
+    completed = status.processed_bytes() / 10
+    total = status.size_raw() / 10
     p = 0 if total == 0 else round(completed * 100 / total)
     p = min(max(p, 0), 100)
-    cFull = p // 8
+    cFull = p // 10
     p_str = '⬢' * cFull
-    p_str += '⬡' * (20 - cFull)
+    p_str += '⬡' * (15 - cFull)
     p_str = f"[{p_str}]"
     return p_str
 
